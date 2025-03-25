@@ -1,0 +1,14 @@
+{
+  "name": "playwright-cucumber-api-test",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cucumber-js",
+    "test-comp": "cucumber-js --tags @company",
+    "test-user": "cucumber-js --tags @user"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^7.3.0",
+    "@playwright/test": "^1.16.0",
+    "axios": "^0.21.1"
+  }
+}
