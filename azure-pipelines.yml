@@ -16,13 +16,13 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install    
+    npm install
   displayName: 'npm install'
 
 - script: |
     npm run test
     echo "Test Execution Finished"
-    if [ -f "report.html" ]; then
+    if [ -f "index.html" ]; then
       echo "📄 Report created successfully"
     else
       echo "❌ Report was not created"
