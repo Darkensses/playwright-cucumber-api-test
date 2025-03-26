@@ -29,7 +29,7 @@ steps:
       git clone https://$(GITHUB_TOKEN)@github.com/Darkensses/playwright-cucumber-api-test.git
       cd playwright-cucumber-api-test
       
-      cp $(Build.ArtifactStagingDirectory)/index.html ./index.html
+      cp ../index.html ./index.html
       
       git add index.html
       git commit -m "Deploy report $(Build.BuildNumber)"
