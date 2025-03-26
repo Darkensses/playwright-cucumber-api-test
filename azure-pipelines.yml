@@ -28,7 +28,7 @@ jobs:
     - script: |
         npm test
         echo "Test Execution Finished"
-        if[ -f "report.html" ]; then
+        if [ -f "report.html" ]; then
           echo "📄 Report created successfully"
         else
           echo "❌ Report was not created"
