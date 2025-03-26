@@ -25,6 +25,7 @@ steps:
     if [ -f "index.html" ]; then      
       git config --global user.email "darkensses@gmail.com"
       git config --global user.name "Jasiel Guillen"
+      git pull origin main
       git add index.html
       git commit -m "Report generated $(Build.BuildNumber)"
       git push https://$(GITHUB_TOKEN)@github.com/Darkensses/playwright-cucumber-api-test.git HEAD:main
