@@ -9,29 +9,23 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-jobs:
-  - job: Installation
-    displayName: 'Setting up'
-    steps:
-    - task: NodeTool@0
-      inputs:
-        versionSpec: '20.x'
-      displayName: 'Install Node.js'
-    
-    - script: |
-        npm install
-      displayName: 'npm install'
-  
-  - job: RunTests
-    displayName: Run Tests
-    steps:
-    - script: |
-        npm run test
-        echo "Test Execution Finished"
-        if [ -f "report.html" ]; then
-          echo "📄 Report created successfully"
-        else
-          echo "❌ Report was not created"
-          exit 1
-        fi
-      displayName: 'npm run test'
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install    
+  displayName: 'npm install'
+
+- script: |
+    npm run test
+    echo "Test Execution Finished"
+    if [ -f "report.html" ]; then
+      echo "📄 Report created successfully"
+    else
+      echo "❌ Report was not created"
+      exit 1
+    fi
+  displayName: 'npm run test'
