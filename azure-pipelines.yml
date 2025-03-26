@@ -34,3 +34,4 @@ jobs:
           echo "❌ Report was not created"
           exit 1
         fi
+      displayName: 'npm run test'
