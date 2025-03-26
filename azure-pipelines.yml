@@ -26,7 +26,7 @@ jobs:
     displayName: Run Tests
     steps:
     - script: |
-        npm test
+        npm run test
         echo "Test Execution Finished"
         if [ -f "report.html" ]; then
           echo "📄 Report created successfully"
